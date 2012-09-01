@@ -1,0 +1,33 @@
+<%= form_for(@blogpost) do |f| %>
+  <% if @blogpost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blogpost.errors.count, "error") %> prohibited this blogpost from being saved:</h2>
+
+      <ul>
+      <% @blogpost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :excerpt %><br />
+    <%= f.text_area :excerpt %>
+  </div>
+  <div class="field">
+    <%= f.label :timestamp %><br />
+    <%= f.datetime_select :timestamp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

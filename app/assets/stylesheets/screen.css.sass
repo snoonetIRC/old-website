@@ -1,0 +1,110 @@
+@import compass/reset
+@import compass/css3
+
+@import partials/colors
+@import partials/typography
+@import partials/constants
+
+// Stuff in this file appears in EVERY frontend page, so try to keep it light
+
+body
+  font-family: $font-family
+  font-size: $font-size
+  -webkit-font-smoothing: antialiased
+  background: $background-grey
+  color: $color
+
+a
+  color: $link-blue
+
+  &:hover
+    color: lighten($link-blue, 30%)
+
+  &:visited
+    color: $link-purple
+
+#header
+  +background(linear-gradient(lighten($light-grey, 5%), darken($light-grey, 10%)), $light-grey)
+  padding: 10px 10px 15px
+  border-bottom: 1px solid darken($light-grey, 20%)
+  position: relative
+  max-height: 72px
+  margin-bottom: 10px
+
+  h1 a
+    color: darken($dark-grey, 10%)
+    font-weight: bold
+    font-size: 46px
+    text-shadow: 0px 1px 0px hsla(0,0%,100%,.6)
+    text-decoration: none
+  #navigation
+    background: darken($light-grey, 20%)
+    border: 1px solid $dark-grey
+    padding: 8px
+    position: absolute
+    right: 15px
+    top: 16px
+    +border-radius
+    +box-shadow(0px 1px 0px hsla(0,0%,100%,.6), inset 0px 3px 5px -4px hsla(0,0,0,.5))
+
+    ul
+      li
+        display: inline-block
+
+        a
+          font-weight: bold
+          font-size: 16px
+          text-decoration: none
+          color: darken($dark-grey, 20%)
+          padding:  0px 6px 0 5px
+
+        &:last-child a
+          border-right: none
+
+#content
+  width: $width
+  padding: 12px
+  margin: 0 auto
+
+  #sidebar
+    float: left
+    margin-right: 20px
+    width: $sidebar-width
+
+    .category
+      border: 1px solid lighten($dark-grey, 20%)
+      background: hsl(0,0%,90%)
+      margin-bottom: 10px
+      +border-radius
+
+      .category-header
+        display: block
+        padding: 5px
+        margin: -1px
+        border: 1px solid lighten($dark-grey, 20%)
+        color: lighten($color, 5%)
+        font-weight: bold
+        font-size: 16px
+        text-decoration: none
+        +background(linear-gradient(hsl(0,0,95%), hsl(0,0,85)))
+        +box-shadow(0 1px 2px hsla(0, 0%, 0%, .1), 0 1px 1px white inset)
+        +border-radius
+        +text-shadow(0 1px 0 hsla(0,0,100%,.6))
+
+        &:active, &:focus
+          outline: 0px
+      ul
+        padding: 10px
+
+        li a
+          text-decoration: none
+          display: block
+          padding: 3px 0
+          font-weight: bold
+          color: lighten($color, 5%)
+
+
+  #main
+    float: left
+    width: $width - $sidebar-width - 20px
+    +transition(opacity 100ms linear)
