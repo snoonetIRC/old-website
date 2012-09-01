@@ -31,6 +31,7 @@ ActiveAdmin.register Blogpost do
     f.input :body
     f.input :excerpt, hint: "Not required, but useful if you want a different post-blurb from body"
     f.input :published
+    f.buttons
   end
 end
 end
