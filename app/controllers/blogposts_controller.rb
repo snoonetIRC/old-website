@@ -3,7 +3,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts.json
   def index
     @blogposts = Blogpost.all
-
+    @full = false
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @blogposts }
@@ -14,7 +14,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1.json
   def show
     @blogpost = Blogpost.find(params[:id])
-
+    @full = true
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blogpost }

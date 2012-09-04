@@ -1,4 +1,4 @@
-jQuery ->
-  $('#sidebar').accordion
-    header: '.category-header'
-    autoHeight: false
+# jQuery ->
+#   $('#sidebar').accordion
+#     header: '.category-header'
+#     autoHeight: false

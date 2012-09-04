@@ -1,0 +1,6 @@
+- content_for(:page_title, "Blog")
+- if pjax_request?
+  %title= 'Snoonet: Blog'
+%header.main-header
+  %h1.icon-newspaper Blog
+= render @blogposts

@@ -1,5 +1,5 @@
 jQuery ->
-  $('#sidebar .category li a').pjax('#main')
+  $('#sidebar .category li a, #main a').pjax('#main')
   $('#main')
     .on('pjax:start', ->
         console.log('pjax:start')

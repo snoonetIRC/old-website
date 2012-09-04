@@ -4,6 +4,7 @@
 @import partials/colors
 @import partials/typography
 @import partials/constants
+@import partials/icons
 
 // Stuff in this file appears in EVERY frontend page, so try to keep it light
 
@@ -31,6 +32,11 @@ a
   max-height: 72px
   margin-bottom: 10px
 
+  .center
+    width: $width
+    margin: 0 auto
+    position: relative
+
   h1 a
     color: darken($dark-grey, 10%)
     font-weight: bold
@@ -42,8 +48,8 @@ a
     border: 1px solid $dark-grey
     padding: 8px
     position: absolute
-    right: 15px
-    top: 16px
+    right: 0px
+    top: 8px
     +border-radius
     +box-shadow(0px 1px 0px hsla(0,0%,100%,.6), inset 0px 3px 5px -4px hsla(0,0,0,.5))
 
@@ -72,7 +78,7 @@ a
     width: $sidebar-width
 
     .category
-      border: 1px solid lighten($dark-grey, 20%)
+      border: 1px solid $med-grey
       background: hsl(0,0%,90%)
       margin-bottom: 10px
       +border-radius
@@ -101,10 +107,30 @@ a
           display: block
           padding: 3px 0
           font-weight: bold
+          font-size: 14px
           color: lighten($color, 5%)
 
 
   #main
     float: left
-    width: $width - $sidebar-width - 20px
+    width: $width - $sidebar-width - 20px - 20px - 2px
     +transition(opacity 100ms linear)
+    background: white
+    padding: 10px
+    border: 1px solid $med-grey
+    +border-radius(7px)
+    +box-shadow(0px 2px 4px -2px hsla(0,0,0,.1))
+
+    .main-header
+      border-bottom: 1px solid $med-grey
+      padding: 0 0 10px
+      margin-bottom: 10px
+      h1
+        font-weight: bold
+        font-size: 26px
+
+        &::before
+          font-size: 20px
+
+// Blogposts
+@import sections/blogposts

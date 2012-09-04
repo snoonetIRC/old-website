@@ -2,25 +2,25 @@
   %li.category
     %a.category-header{href: '#'} General
     %ul
-      %li= link_to 'Blog', :root
-      %li= link_to 'Webchat', 'http://webchat.snoonet.com/'
+      %li= link_to 'Blog', :root, class: 'icon-newspaper'
+      %li= link_to 'Webchat', 'http://webchat.snoonet.com/', class: 'icon-chat'
   %li.category
     %a.category-header{href: '#'} Information
     %ul
-      %li= link_to 'Staff', :staffs
-      %li= link_to 'Sponsors'
+      %li= link_to 'Staff', :staffs, class: 'icon-star'
+      %li= link_to 'Sponsors', :sponsors, class: 'icon-coins'
   %li.category
     %a.category-header{href: '#'} Status
     %ul
-      %li= link_to "Status"
+      %li= link_to "Status", :root, class: 'icon-weather'
   %li.category
     %a.category-header{href: '#'} Rules and Guidelines
     %ul
-      %li= link_to 'User Rules'
-      %li= link_to 'Channel Rules'
-      %li= link_to 'Conduct'
-      %li= link_to 'Help and Guidelines'
+      %li= link_to 'User Rules', :root, class: 'icon-hollow-shield'
+      %li= link_to 'Channel Rules', :root, class: 'icon-shield'
+      %li= link_to 'Conduct', :root, class: 'icon-checklist'
+      %li= link_to 'Help and Guidelines', :root, class: 'icon-question'
   %li.category
     %a.category-header{href: '#'} Service Info
     %ul
-      %li= link_to 'Terms of Service'
+      %li= link_to 'Terms of Service', :root, class: 'icon-script'
