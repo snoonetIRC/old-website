@@ -1,4 +1,5 @@
 Snoonet::Application.routes.draw do
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -12,6 +13,8 @@ Snoonet::Application.routes.draw do
   resources :blogposts
 
   root to: 'blogposts#index'
+
+  get ':id',to:'pages#show', as: :page
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
