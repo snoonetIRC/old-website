@@ -1,0 +1,160 @@
+$code-background: hsl(210,6%,12%)
+$code-current-line: #282a2e
+$code-selection: #373b41
+$code-foreground: #c5c8c6
+$code-comment: #969896
+$code-red: #cc6666
+$code-orange: #de935f
+$code-yellow: #f0c674
+$code-green: #b5bd68
+$code-aqua: #8abeb7
+$code-blue: #81a2be
+$code-purple: #b294bb
+
+.highlighttable
+  background: $code-background
+  border: 1px solid lighten($code-background, 10%)
+  color: $code-foreground
+  font-family: $mono
+  font-size: 14px
+  line-height: 18px
+  padding: 10px
+  margin: 15px 5px
+  border-collapse: separate
+  display: block
+  overflow: auto
+  +border-radius(5px)
+  +box-shadow(0px 1px 0px hsla(0,0%,100%,1))
+
+  &::-webkit-scrollbar
+    background: lighten($code-background, 30%)
+    height: 10px
+
+  &::-webkit-scrollbar-thumb
+    background: lighten($code-background, 10%)
+    +border-radius(15px)
+    border: 1px solid lighten($code-background, 30%)
+
+  .linenos
+    padding-right: 10px
+    border-right: 1px solid lighten($code-background, 10%)
+    color: $code-comment
+    border-bottom: none
+
+  .code
+    padding-left: 5px
+    border: 0
+
+  tr:nth-child(odd) td
+    background: none !important
+
+  .hll
+    background-color: $code-selection
+  .c //Comment
+    color: $code-comment
+  .err //Error
+    color: $code-red
+  .k //Keyword
+    color: $code-purple
+  .n //Name
+    color: $code-blue
+  .o //Operator
+    color: $code-aqua
+  .p //Punctuation
+    color: $code-foreground
+  .cm //Comment.Multiline
+    color: $code-comment
+  .cp //Comment.Preproc
+    color: $code-comment
+  .c1 //Comment.Single
+    color: $code-comment
+  .cs //Comment.Special
+    color: $code-comment
+  .kc //Keyword.Constant
+    color: $code-foreground
+  .kd //Keyword.Declaration
+    color: $code-foreground
+  .kn //Keyword.Namespace
+    color: $code-foreground
+  .kp //Keyword.Pseudo
+    color: $code-blue
+  .kr //Keyword.Reserved
+    color: $code-foreground
+  .kt //Keyword.Type
+    color: $code-blue
+  .m //Literal.Number
+    color: $code-foreground
+  .s //Literal.String
+    color: $code-green
+  .na //Name.Attribute
+    color: $code-yellow
+  .nb //Name.Builtin
+    color: $code-green
+  .nc //Name.Class
+    color: $code-yellow
+  .no //Name.Constant
+    color: $code-orange
+  .nd //Name.Decorator
+    color: $code-yellow
+  .ni //Name.Entity
+    color: $code-foreground
+  .ne //Name.Exception
+    color: $code-foreground
+  .nf //Name.Function
+    color: $code-blue
+  .nl //Name.Label
+    color: $code-foreground
+  .nn //Name.Namespace
+    color: $code-foreground
+  .nx //Name.Other
+    color: $code-foreground
+  .py //Name.Property
+    color: $code-foreground
+  .nt //Name.Tag
+    color: $code-red
+  .nv //Name.Variable
+    color: $code-orange
+  .ow //Operator.Word
+    color: $code-aqua
+  .w //Text.Whitespace
+    color: $code-foreground
+  .mf //Literal.Number.Float
+    color: $code-foreground
+  .mh //Literal.Number.Hex
+    color: $code-foreground
+  .mi //Literal.Number.Integer
+    color: $code-foreground
+  .mo //Literal.Number.Oct
+    color: $code-foreground
+  .sb //Literal.String.Backtick
+    color: $code-green
+  .sc //Literal.String.Char
+    color: $code-green
+  .sd //Literal.String.Doc
+    color: $code-green
+  .s2 //Literal.String.Double
+    color: $code-green
+  .se //Literal.String.Escape
+    color: $code-green
+  .sh //Literal.String.Heredoc
+    color: $code-green
+  .si //Literal.String.Interpol
+    color: $code-green
+  .sx //Literal.String.Other
+    color: $code-green
+  .sr //Literal.String.Regex
+    color: $code-red
+  .s1 //Literal.String.Single
+    color: $code-green
+  .ss //Literal.String.Symbol
+    color: $code-green
+  .bp //Name.Builtin.Pseudo
+    color: $code-aqua
+  .vc //Name.Variable.Class
+    color: $code-foreground
+  .vg //Name.Variable.Global
+    color: $code-foreground
+  .vi //Name.Variable.Instance
+    color: $code-red
+  .il //Literal.Number.Integer.Long
+    color: $code-foreground

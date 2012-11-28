@@ -1,9 +1,12 @@
 module ApplicationHelper
-  def pretty_time timestamp
-    return time_tag timestamp, time_ago_in_words(timestamp) + (timestamp.future? ? ' in the future': ' ago'), title: timestamp.strftime('%A, %B %-d, %Y - %-l:%M %p %Z'), class: ['icon-time']
+  class CustomHtml < Redcarpet::Render::SmartyHTML
+    def block_code(code, language)
+      sha = Digest::SHA1.hexdigest(code)
+      Rails.cache.fetch ["code", language, sha].join('-') do
+        Pygments.highlight(code, lexer: language, options: {linenos: 'table'}) + ">"
+      end
+    end
   end
-
-  # Markdown
 
   def format text
     render_options = {
@@ -22,14 +25,18 @@ module ApplicationHelper
     }
 
 
-    render = Redcarpet::Render::HTML.new(render_options)
+    render = CustomHtml.new(render_options)
     markdown = Redcarpet::Markdown.new(render, options)
-    smarty = Redcarpet::Render::SmartyPants
-    smarty.render(markdown.render(Liquid::Template.parse(text).render)).html_safe
+    markdown.render(Liquid::Template.parse(text).render).html_safe
   end
-
   def smarten text
     smarty = Redcarpet::Render::SmartyPants
     smarty.render(text).html_safe
   end
+
+  def pretty_time timestamp
+    # time_tag timestamp, (time_ago_in_words(timestamp) + (timestamp.future? ? ' in the future': ' ago')), title: timestamp.strftime('%A, %B %-d, %Y – %-l:%M %p %Z'), class: ['icon-time']
+    return time_tag timestamp, time_ago_in_words(timestamp) + (timestamp.future? ? ' in the future': ' ago'), title: timestamp.strftime('%A, %B %-d, %Y - %-l:%M %p %Z'), class: ['icon-time']
+  end
+
 end

@@ -45,6 +45,8 @@ gem 'haml'
 gem 'liquid'
 gem 'redcarpet'
 
+gem 'pygments.rb'
+
 gem 'kaminari'
 gem 'google-webfonts'
 

@@ -1,6 +1,7 @@
-.center
-  %h1= link_to 'Snoonet', :root
+.wrap
+  %hgroup
+    %h1= link_to 'Snoonet', :root
   %nav#navigation
     %ul
-      %li= link_to "Blog", :root
+      %li= link_to_unless_current "Blog", :root
       %li= link_to "Webchat", 'http://webchat.snoonet.com/'

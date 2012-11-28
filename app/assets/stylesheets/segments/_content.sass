@@ -1,0 +1,55 @@
+#content
+  clear: both
+  position: relative
+
+  #sidebar
+    margin
+      left: 0
+      right: 10px
+    width: $sidebar
+    display: inline
+    float: left
+
+    .category
+      background: lighten($light-gray, 5%)
+
+      ul
+        padding: 5px
+        border-bottom: 5px solid white
+
+
+
+        li
+          text-decoration: none
+          font-weight: 400
+          &.current a
+            color: $dark-purple
+          a
+            color: lighten($text, 10%)
+            text-decoration: inherit
+            &:hover
+              color: $purple
+
+
+    .category-header
+      background: $light-gray
+      display: block
+      padding: 5px
+      font-weight: 500
+      color: black
+      text-decoration: none
+      border-bottom: 1px solid white
+  #main
+    width: $width - $sidebar - 10px
+    display: inline
+    float: left
+    margin-left: 10px
+
+    .main-header
+      padding-bottom: 5px
+      margin-bottom: 10px
+      h1
+        font-weight: bold
+        font-size: 20px
+        line-height: 20px * 1.2
+

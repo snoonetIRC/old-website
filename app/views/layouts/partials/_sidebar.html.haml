@@ -2,25 +2,25 @@
   %li.category
     %a.category-header{href: '#'} General
     %ul
-      %li= link_to 'Blog', :root, class: 'icon-newspaper'
-      %li= link_to 'Webchat', 'http://webchat.snoonet.com/', class: 'icon-chat'
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Blog', :root, class: 'icon-newspaper')
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Webchat', 'http://webchat.snoonet.com/', class: 'icon-chat')
   %li.category
     %a.category-header{href: '#'} Information
     %ul
-      %li= link_to 'Staff', :staffs, class: 'icon-star'
-      %li= link_to 'Sponsors', :sponsors, class: 'icon-coins'
+      %li{class: current_page?(:staffs) ? 'current' : nil}= link_to('Staff', :staffs, class: 'icon-star')
+      %li{class: current_page?(:sponsors) ? 'current' : nil}= link_to('Sponsors', :sponsors, class: 'icon-coins')
   %li.category
     %a.category-header{href: '#'} Status
     %ul
-      %li= link_to "Status", :root, class: 'icon-weather'
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to("Status", :root, class: 'icon-weather')
   %li.category
     %a.category-header{href: '#'} Rules and Guidelines
     %ul
-      %li= link_to 'User Rules', :root, class: 'icon-hollow-shield'
-      %li= link_to 'Channel Rules', :root, class: 'icon-shield'
-      %li= link_to 'Conduct', :root, class: 'icon-checklist'
-      %li= link_to 'Help and Guidelines', :root, class: 'icon-question'
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('User Rules', :root, class: 'icon-hollow-shield')
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Channel Rules', :root, class: 'icon-shield')
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Conduct', :root, class: 'icon-checklist')
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Help and Guidelines', :root, class: 'icon-question')
   %li.category
     %a.category-header{href: '#'} Service Info
     %ul
-      %li= link_to 'Terms of Service', :root, class: 'icon-script'
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Terms of Service', :root, class: 'icon-script')
