@@ -2,4 +2,29 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  navigation:
+    headers:
+      general:  "General"
+      information: "Information"
+      status: "Status"
+      rules: "Rules and Guidelines"
+      services: "Service Info"
+
+    updates: "Updates"
+    webchat: "Webchat"
+
+    staff: "Staff"
+    sponsors: "Sponsors"
+
+    status: "Status"
+
+    user_rules: "User Rules"
+    channel_rules: "Channel Rules"
+    conduct: "Conduct"
+    help: "Help and Guidelines"
+
+    tos: "Terms of Service"
+  updates:
+    readmore: 'Read More »'
+
+

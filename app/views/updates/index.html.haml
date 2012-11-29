@@ -1,4 +1,4 @@
-- content_for(:page_title, "Blog")
+- content_for(:page_title, t('navigation.updates'))
 %header.main-header
-  %h1.icon-newspaper Blog
+  %h1.icon-newspaper=t('navigation.updates')
 = render @updates

@@ -11,5 +11,5 @@
       = link_to "&laquo; #{@update.older.title}".html_safe, @update.older, class: 'older' if @update.older.present?
       = link_to "#{@update.newer.title} &raquo;".html_safe, @update.newer, class: 'newer' if @update.newer.present?
     - else
-      = link_to "Read more&hellip;".html_safe, update, class: 'read-more'
+      = link_to t('updates.readmore'), update, class: 'read-more'
     %div{style: 'clear: both'}

@@ -1,26 +1,26 @@
 %ul
   %li.category
-    %a.category-header{href: '#'} General
+    %a.category-header{href: '#'}=t('navigation.headers.general')
     %ul
-      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Blog', :root, class: 'icon-newspaper')
-      %li= link_to('Webchat', CONFIG[:links][:webchat], class: 'icon-chat')
+      %li{class: current_page?(:root) ? 'current' : nil}= link_to(t('navigation.updates'), :root, class: 'icon-newspaper')
+      %li= link_to(t('navigation.webchat'), CONFIG[:links][:webchat], class: 'icon-chat')
   %li.category
-    %a.category-header{href: '#'} Information
+    %a.category-header{href: '#'}=t('navigation.headers.information')
     %ul
-      %li{class: current_page?(staff_index_path) ? 'current' : nil}= link_to('Staff', staff_index_path, class: 'icon-star')
-      %li{class: current_page?(:sponsors) ? 'current' : nil}= link_to('Sponsors', :sponsors, class: 'icon-coins')
+      %li{class: current_page?(staff_index_path) ? 'current' : nil}= link_to(t('navigation.staff'), staff_index_path, class: 'icon-star')
+      %li{class: current_page?(:sponsors) ? 'current' : nil}= link_to(t('navigation.sponsors'), :sponsors, class: 'icon-coins')
   %li.category
-    %a.category-header{href: '#'} Status
+    %a.category-header{href: '#'}=t('navigation.headers.status')
     %ul
-      %li{class: current_page?(page_path('status')) ? 'current' : nil}= link_to("Status", page_path('status'), class: 'icon-weather')
+      %li{class: current_page?(page_path('status')) ? 'current' : nil}= link_to(t('navigation.status'), page_path('status'), class: 'icon-weather')
   %li.category
-    %a.category-header{href: '#'} Rules and Guidelines
+    %a.category-header{href: '#'}=t('navigation.headers.rules')
     %ul
-      %li{class: current_page?(page_path('user-rules')) ? 'current' : nil}= link_to('User Rules', page_path('user-rules'), class: 'icon-hollow-shield')
-      %li{class: current_page?(page_path('channel-rules')) ? 'current' : nil}= link_to('Channel Rules', page_path('channel-rules'), class: 'icon-shield')
-      %li{class: current_page?(page_path('conduct')) ? 'current' : nil}= link_to('Conduct', page_path('conduct'), class: 'icon-checklist')
-      %li{class: current_page?(page_path('help')) ? 'current' : nil}= link_to('Help and Guidelines', page_path('help'), class: 'icon-question')
+      %li{class: current_page?(page_path('user-rules')) ? 'current' : nil}= link_to(t('navigation.user_rules'), page_path('user-rules'), class: 'icon-hollow-shield')
+      %li{class: current_page?(page_path('channel-rules')) ? 'current' : nil}= link_to(t('navigation.channel_rules'), page_path('channel-rules'), class: 'icon-shield')
+      %li{class: current_page?(page_path('conduct')) ? 'current' : nil}= link_to(t('navigation.conduct'), page_path('conduct'), class: 'icon-checklist')
+      %li{class: current_page?(page_path('help')) ? 'current' : nil}= link_to(t('navigation.help'), page_path('help'), class: 'icon-question')
   %li.category
-    %a.category-header{href: '#'} Service Info
+    %a.category-header{href: '#'}=t('navigation.headers.services')
     %ul
-      %li{class: current_page?(page_path('tos')) ? 'current' : nil}= link_to('Terms of Service', page_path('tos'), class: 'icon-script')
+      %li{class: current_page?(page_path('tos')) ? 'current' : nil}= link_to(t('navigation.tos'), page_path('tos'), class: 'icon-script')
