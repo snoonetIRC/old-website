@@ -39,8 +39,6 @@ end
 gem 'compass'
 gem 'compass-rails'
 
-gem 'pjax_rails'
-
 gem 'haml'
 gem 'liquid'
 gem 'redcarpet'
