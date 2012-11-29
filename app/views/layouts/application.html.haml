@@ -2,9 +2,9 @@
 %html
   %head
     %title= ["Snoonet", yield(:page_title)].reject(&:empty?).compact.join(': ').html_safe
-    = google_webfonts_link_tag roboto: [100, 400, 500, 700, "italic", "bolditalic"]
     = stylesheet_link_tag 'application-screen', media: 'screen'
     = javascript_include_tag 'application'
+    = google_webfonts_link_tag roboto: [100, 400, 500, 700, "italic", "bolditalic"]
     = csrf_meta_tags
   %body
     %header#header

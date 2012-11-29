@@ -39,6 +39,8 @@ end
 gem 'compass'
 gem 'compass-rails'
 
+gem 'turbolinks'
+
 gem 'haml'
 gem 'liquid'
 gem 'redcarpet'
