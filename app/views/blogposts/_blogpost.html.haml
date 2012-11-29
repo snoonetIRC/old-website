@@ -5,11 +5,11 @@
     = pretty_time blogpost.timestamp
   %section.content
     = format(@full ? blogpost.body : blogpost.summary )
- 
+
   %footer.footer
     - if @full
       = link_to "&laquo; #{@blogpost.older.title}".html_safe, @blogpost.older, class: 'older' if @blogpost.older.present?
       = link_to "#{@blogpost.newer.title} &raquo;".html_safe, @blogpost.newer, class: 'newer' if @blogpost.newer.present?
     - else
-      = link_to "Read more&hellip;".html_safe, @blogpost, class: 'read-more'
+      = link_to "Read more&hellip;".html_safe, blogpost, class: 'read-more'
     %div{style: 'clear: both'}
