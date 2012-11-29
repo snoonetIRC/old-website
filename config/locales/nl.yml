@@ -1,0 +1,29 @@
+# Dutch translation, most is correct. Might want a second opionion
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+nl:
+  navigation:
+    headers:
+      general:  "Algemeen"
+      information: "Informatie"
+      status: "Status"
+      rules: "Regels en Richtlijnen"
+      services: "Service Info"
+
+    updates: "Updates"
+    webchat: "Webchat"
+
+    staff: "Medewerkers"
+    sponsors: "Sponsoren"
+
+    status: "Status"
+
+    user_rules: "Gebruikersregels"
+    channel_rules: "Kanaalregels"
+    conduct: "Gedrag"
+    help: "Help en Richtlijnen"
+
+    tos: "Gebruiksvoorwaarden"
+  updates:
+    readmore: 'Lees meer »'
+
