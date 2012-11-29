@@ -28,9 +28,14 @@ class Blogpost < ActiveRecord::Base
     Blogpost.unscoped.where('timestamp < ? AND published = ?', self.timestamp, true).order('timestamp DESC').limit(1)[0]
   end
 
+  def to_param
+    "#{id}-#{title}".parameterize
+  end
+
   private
 
   def default_timestamp
     self.timestamp ||= Time.now
   end
+
 end
