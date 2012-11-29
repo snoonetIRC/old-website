@@ -1,0 +1,28 @@
+# This is translated into polish. Somewhat. Don't expect it to be perfect. Hell, I'm 99% sure something has to be changed
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pl:
+  navigation:
+    headers:
+      general: "Ogólne"
+      information: "Informacje"
+      status: "Stan Serwerów"
+      rules: "Zasady i Wytyczne"
+      services: "Informacje o Us³udze"
+
+    updates: "Aktualizacje"
+    webchat: "Webchat"
+
+    staff: "Personel"
+    sponsors: "Sponsorzy"
+
+    status: "Stan Serwerów"
+
+    user_rules: "Zasady U¿ytkowników"
+    channel_rules: "Zasady Kana³ów"
+    conduct: "Postêpowanie"
+    help: "Pomoc i Wytyczne"
+
+    tos: "Zasady Us³ugi"
+  updates:
+    readmore: 'Wiêcej »'
