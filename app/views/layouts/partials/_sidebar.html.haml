@@ -3,7 +3,7 @@
     %a.category-header{href: '#'} General
     %ul
       %li{class: current_page?(:root) ? 'current' : nil}= link_to('Blog', :root, class: 'icon-newspaper')
-      %li{class: current_page?(:root) ? 'current' : nil}= link_to('Webchat', 'http://webchat.snoonet.com/', class: 'icon-chat')
+      %li= link_to('Webchat', CONFIG[:links][:webchat], class: 'icon-chat')
   %li.category
     %a.category-header{href: '#'} Information
     %ul

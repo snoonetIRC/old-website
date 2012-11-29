@@ -4,4 +4,4 @@
   %nav#navigation
     %ul
       %li= link_to_unless_current "Blog", :root
-      %li= link_to "Webchat", 'http://webchat.snoonet.com/'
+      %li= link_to "Webchat", CONFIG[:links][:webchat]
