@@ -1,5 +1,6 @@
-ActiveAdmin.register Blogpost do
+ActiveAdmin.register Update do
   config.per_page = 10
+  menu priority: 1
 
   index do
     selectable_column
@@ -11,13 +12,13 @@ ActiveAdmin.register Blogpost do
     default_actions
   end
   batch_action :publish do |selection|
-    Blogpost.find(selection).each do |post|
+    Update.find(selection).each do |post|
       post.published = true
       post.save!
     end
   end
   batch_action :unpublish do |selection|
-    Blogpost.find(selection).each do |post|
+    Update.find(selection).each do |post|
       post.published = false
       post.save!
     end

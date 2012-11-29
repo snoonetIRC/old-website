@@ -1,17 +1,17 @@
-class StaffsController < ApplicationController
-  # GET /staffs
-  # GET /staffs.json
+class StaffController < ApplicationController
+  # GET /staff
+  # GET /staff.json
   def index
-    @staffs = Staff.all
+    @staff = Staff.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @staffs }
+      format.json { render json: @staff }
     end
   end
 
-  # GET /staffs/1
-  # GET /staffs/1.json
+  # GET /staff/1
+  # GET /staff/1.json
   def show
     @staff = Staff.find(params[:id])
 
@@ -21,8 +21,8 @@ class StaffsController < ApplicationController
     end
   end
 
-  # # GET /staffs/new
-  # # GET /staffs/new.json
+  # # GET /staff/new
+  # # GET /staff/new.json
   # def new
   #   @staff = Staff.new
 
@@ -32,13 +32,13 @@ class StaffsController < ApplicationController
   #   end
   # end
 
-  # # GET /staffs/1/edit
+  # # GET /staff/1/edit
   # def edit
   #   @staff = Staff.find(params[:id])
   # end
 
-  # # POST /staffs
-  # # POST /staffs.json
+  # # POST /staff
+  # # POST /staff.json
   # def create
   #   @staff = Staff.new(params[:staff])
 
@@ -53,8 +53,8 @@ class StaffsController < ApplicationController
   #   end
   # end
 
-  # # PUT /staffs/1
-  # # PUT /staffs/1.json
+  # # PUT /staff/1
+  # # PUT /staff/1.json
   # def update
   #   @staff = Staff.find(params[:id])
 
@@ -69,14 +69,14 @@ class StaffsController < ApplicationController
   #   end
   # end
 
-  # # DELETE /staffs/1
-  # # DELETE /staffs/1.json
+  # # DELETE /staff/1
+  # # DELETE /staff/1.json
   # def destroy
   #   @staff = Staff.find(params[:id])
   #   @staff.destroy
 
   #   respond_to do |format|
-  #     format.html { redirect_to staffs_url }
+  #     format.html { redirect_to staff_url }
   #     format.json { head :no_content }
   #   end
   # end

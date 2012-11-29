@@ -7,7 +7,7 @@
   %li.category
     %a.category-header{href: '#'} Information
     %ul
-      %li{class: current_page?(:staffs) ? 'current' : nil}= link_to('Staff', :staffs, class: 'icon-star')
+      %li{class: current_page?(staff_index_path) ? 'current' : nil}= link_to('Staff', staff_index_path, class: 'icon-star')
       %li{class: current_page?(:sponsors) ? 'current' : nil}= link_to('Sponsors', :sponsors, class: 'icon-coins')
   %li.category
     %a.category-header{href: '#'} Status

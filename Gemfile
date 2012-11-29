@@ -42,6 +42,7 @@ gem 'compass-rails'
 gem 'turbolinks'
 
 gem 'haml'
+gem 'slim'
 gem 'liquid'
 gem 'redcarpet'
 

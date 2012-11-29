@@ -3,8 +3,8 @@ ActiveAdmin.register_page "Dashboard" do
   menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
 
   content :title => proc{ I18n.t("active_admin.dashboard") } do
-    section "Recent Blogposts" do
-      table_for Blogpost.published.order('timestamp desc').limit(5) do
+    section "Recent Updates" do
+      table_for Update.published.order('timestamp desc').limit(5) do
         column :title
         column :timestamp
       end

@@ -1,4 +1,4 @@
-class Blogpost < ActiveRecord::Base
+class Update < ActiveRecord::Base
   attr_accessible :body, :excerpt, :timestamp, :title, :published
 
   before_create :default_timestamp
@@ -19,13 +19,13 @@ class Blogpost < ActiveRecord::Base
    # Links to the newer post
   #
   def newer
-    Blogpost.unscoped.where('timestamp > ? AND published = ?', self.timestamp, true).order('timestamp ASC').limit(1)[0]
+    Update.unscoped.where('timestamp > ? AND published = ?', self.timestamp, true).order('timestamp ASC').limit(1)[0]
   end
 
   # Links to the older post
   #
   def older
-    Blogpost.unscoped.where('timestamp < ? AND published = ?', self.timestamp, true).order('timestamp DESC').limit(1)[0]
+    Update.unscoped.where('timestamp < ? AND published = ?', self.timestamp, true).order('timestamp DESC').limit(1)[0]
   end
 
   def to_param

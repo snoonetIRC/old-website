@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do
+  menu priority: 11
   index do
     column :email
     column :current_sign_in_at

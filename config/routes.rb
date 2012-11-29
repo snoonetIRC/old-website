@@ -8,11 +8,11 @@ Snoonet::Application.routes.draw do
 
   resources :sponsors
 
-  resources :staffs
+  resources :staff
 
-  resources :blogposts
+  resources :updates
 
-  root to: 'blogposts#index'
+  root to: 'updates#index'
 
   get ':id',to:'pages#show', as: :page
 
