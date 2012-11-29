@@ -9,6 +9,10 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# Load our config
+CONFIG = YAML.load_file(File.expand_path('../application.yml', __FILE__)).with_indifferent_access
+
+
 module Snoonet
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
