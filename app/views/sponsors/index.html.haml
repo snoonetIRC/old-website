@@ -1,0 +1,9 @@
+%article.sponsor
+  %header.main_header
+    %h1.icon-coins Sponsors
+  .content
+    %p
+      Snoonet would not be possible without the generosity of the following sponsors:
+    - @sponsors.each do |sponsor|
+      %a{href: sponsor.url, target: 'blank', class: 'sponsor-grid', title: sponsor.name}><
+        %img{src: sponsor.image_url, alt: sponsor.name}><

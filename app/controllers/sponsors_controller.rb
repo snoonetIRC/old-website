@@ -10,16 +10,16 @@ class SponsorsController < ApplicationController
     end
   end
 
-  # GET /sponsors/1
-  # GET /sponsors/1.json
-  def show
-    @sponsor = Sponsor.find(params[:id])
+  # # GET /sponsors/1
+  # # GET /sponsors/1.json
+  # def show
+  #   @sponsor = Sponsor.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @sponsor }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html # show.html.erb
+  #     format.json { render json: @sponsor }
+  #   end
+  # end
 
   # # GET /sponsors/new
   # # GET /sponsors/new.json

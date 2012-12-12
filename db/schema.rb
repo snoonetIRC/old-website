@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121212070643) do
+ActiveRecord::Schema.define(:version => 20121212074103) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,11 +65,11 @@ ActiveRecord::Schema.define(:version => 20121212070643) do
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
 
   create_table "sponsors", :force => true do |t|
-    t.string   "name"
     t.string   "url"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "image_url"
   end
 
   create_table "staff", :force => true do |t|
