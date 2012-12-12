@@ -8,17 +8,18 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
   gem 'sqlite3'
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-doc'
 
   gem 'guard-livereload'
 end
 
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
 
 
 group :production do
   gem 'pg'
+  gem 'newrelic_rpm'
 end
 
 # Gems used only for assets and not required
