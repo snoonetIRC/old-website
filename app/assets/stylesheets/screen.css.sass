@@ -17,6 +17,20 @@ body
   line-height: $line-height
   color: $text
 
+footer#footer
+  font-size: 10px
+  line-height: 12px
+  color: darken($light-gray, 20%)
+
+  li
+    display: inline-block
+    border-right: 1px solid darken($light-gray, 20%)
+    padding: 0 5px
+    &:last-child
+      border-right: none
+  a
+    color: inherit
+    text-decoration: none
 @import segments/header
 @import segments/content
 @import segments/page_headers
