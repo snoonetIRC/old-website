@@ -1,9 +1,11 @@
 %article.post{class: ('single' if @full)}
   %header.header
     %h1<
-      = link_to smarten(update.title), update, class: ('icon-newspaper' if @full)
+      = link_to smarten(update.title), update, class: [('icon-newspaper' if @full),('unpublished' unless update.published?)]
     = pretty_time update.timestamp
   %section.content
+    - if (!update.published? and @full)
+      %em You're viewing an unpublished post. Content is subject to change
     = format(@full ? update.body : update.summary )
 
   %footer.footer

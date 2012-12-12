@@ -16,6 +16,9 @@ class Update < ActiveRecord::Base
     end
   end
 
+  def published?
+    published
+  end
    # Links to the newer post
   #
   def newer

@@ -2,7 +2,11 @@ class UpdatesController < ApplicationController
   # GET /updates
   # GET /updates.json
   def index
-    @updates = Update.all
+    if admin_user_signed_in?
+      @updates = Update.all
+    else
+      @updates = Update.published
+    end
     @full = false
     respond_to do |format|
       format.html # index.html.erb
