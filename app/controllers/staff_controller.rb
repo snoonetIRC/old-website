@@ -10,16 +10,16 @@ class StaffController < ApplicationController
     end
   end
 
-  # GET /staff/1
-  # GET /staff/1.json
-  def show
-    @staff = Staff.find(params[:id])
+  # # GET /staff/1
+  # # GET /staff/1.json
+  # def show
+  #   @staff = Staff.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @staff }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html # show.html.erb
+  #     format.json { render json: @staff }
+  #   end
+  # end
 
   # # GET /staff/new
   # # GET /staff/new.json

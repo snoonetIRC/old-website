@@ -1,1 +1,16 @@
-Helo
+%article.staff
+  %header.main_header
+    %h1.icon-star Staff
+  .content
+    %table.staff
+      %thead
+        %tr
+          %th Nick
+          %th Role
+          %th Favorite Channel
+      %tbody
+        - @staff.each do |staff|
+          %tr
+            %td=link_to_if staff.url.present?, staff.name, staff.url
+            %td=staff.role
+            %td=staff.fav_chan
