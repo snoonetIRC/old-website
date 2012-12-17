@@ -19,6 +19,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'unicorn'
   gem 'newrelic_rpm'
 end
 
@@ -53,6 +54,8 @@ gem 'google-webfonts'
 
 gem 'activeadmin'
 
+gem 'capistrano'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -61,9 +64,6 @@ gem 'activeadmin'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
