@@ -1,7 +1,7 @@
 root = "/home/deployer/snoonet/current"
 listen "/tmp/unicorn.sock"
 
-worker_processes 10
+worker_processes 5
 
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
