@@ -12,15 +12,14 @@ group :development do
   gem 'guard-livereload'
 end
 
-  gem 'pry'
-  gem 'pry-rails'
-  gem 'pry-doc'
+gem 'pry'
+gem 'pry-rails'
+gem 'pry-doc'
 
 
 group :production do
   gem 'pg'
   gem 'unicorn'
-  gem 'newrelic_rpm'
 end
 
 # Gems used only for assets and not required
