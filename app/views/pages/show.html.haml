@@ -1,3 +1,4 @@
+- content_for(:page_title, @page.name)
 %article.page
   %header.header
     %h1{class: @page.cssclass}= smarten @page.name
