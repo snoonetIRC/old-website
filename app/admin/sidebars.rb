@@ -11,6 +11,6 @@ ActiveAdmin.register Sidebar do
       f.input :rank, as: :number
       f.input :parent_id, as: :select, collection: Sidebar.order(:rank), include_blank: true
     end
-    f.buttons
+    f.actions
   end
 end
