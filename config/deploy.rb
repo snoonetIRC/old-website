@@ -8,7 +8,7 @@ set :deploy_to, "/home/deployer/snoonet"
 set :user, "deployer"
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :repository,  "git@github.com:paradox460/snoonet.git"
+set :repository,  "git@github.com:snoonetIRC/snoonet.org"
 
 set :scm, :git
 
