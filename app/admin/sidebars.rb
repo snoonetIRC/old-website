@@ -9,7 +9,7 @@ ActiveAdmin.register Sidebar do
     end
     f.inputs "Organization" do
       f.input :rank, as: :number
-      f.input :parent_id, as: :select, collection: Sidebar.order(:rank), include_blank: true
+      f.input :parent_id, as: :select, collection: Sidebar.roots.order(:rank), include_blank: true
     end
     f.actions
   end
