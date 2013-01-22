@@ -8,10 +8,6 @@ module ApplicationHelper
     end
   end
 
-  def escape_backtick_code text
-    text.gsub /(`{3}.*)?`{3}/m, '{% raw %}\1{% endraw %}'
-  end
-
   def format text
     render_options = {
       no_styles: true,
@@ -32,12 +28,12 @@ module ApplicationHelper
     render = CustomHtml.new(render_options)
     markdown = Redcarpet::Markdown.new(render, options)
 
-    output = text
-    output = escape_backtick_code output
+    output = text.gsub(/(^`{3}.*?^`{3})/m, "{% raw %}\n\\1\n{% endraw %}")
     output = Liquid::Template.parse(output).render
     output = markdown.render(output)
     output.html_safe
   end
+
   def smarten text
     smarty = Redcarpet::Render::SmartyPants
     smarty.render(text).html_safe
