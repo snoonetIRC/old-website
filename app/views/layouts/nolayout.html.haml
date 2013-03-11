@@ -1,0 +1,8 @@
+!!! 5
+%html
+  %head
+    = stylesheet_link_tag 'application-screen', media: 'screen'
+    = javascript_include_tag 'application'
+    = google_webfonts_link_tag roboto: [100, 400, 500, 700, "italic", "bolditalic"]
+  %body
+    = yield
