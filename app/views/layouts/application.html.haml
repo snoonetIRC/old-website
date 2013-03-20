@@ -17,8 +17,9 @@
           %p.error= flash[:error]
       %aside#sidebar
         = render 'layouts/partials/sidebar'
-      #main
-        = yield
-        %div{style:"clear:both"}
-        = render 'layouts/partials/footer'
+      #spin-container
+        #main
+          = yield
+          %div{style:"clear:both"}
+          = render 'layouts/partials/footer'
     %div{style:"clear:both"}

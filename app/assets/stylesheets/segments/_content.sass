@@ -39,11 +39,14 @@
       color: black
       text-decoration: none
       border-bottom: 1px solid white
-  #main
+  #spin-container
     width: $width - $sidebar - 10px
     display: inline
     float: left
     margin-left: 10px
+
+  #main
+    +transition('opacity linear 100ms')
 
     .main-header
       padding-bottom: 5px
