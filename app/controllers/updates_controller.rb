@@ -1,4 +1,7 @@
 class UpdatesController < ApplicationController
+  caches_page :index, :show
+  cache_sweeper :updates_sweeper
+  before_filter(only: [:index, :show]) { @page_caching = true }
   # GET /updates
   # GET /updates.json
   def index
