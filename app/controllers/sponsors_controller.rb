@@ -1,7 +1,4 @@
 class SponsorsController < ApplicationController
-  caches_page :index
-  cache_sweeper :sponsors_sweeper
-  before_filter(only: :index) { @page_caching = true}
   # GET /sponsors
   # GET /sponsors.json
   def index

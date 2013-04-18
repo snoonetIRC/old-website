@@ -1,7 +1,4 @@
 class StaffController < ApplicationController
-  caches_page :index
-  cache_sweeper :staff_sweeper
-  before_filter(only: :index) { @page_caching = true}
   # GET /staff
   # GET /staff.json
   def index

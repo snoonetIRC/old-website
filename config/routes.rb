@@ -13,7 +13,6 @@ Snoonet::Application.routes.draw do
   root to: 'updates#index'
 
   get ':id',to:'pages#show', as: :page
-  resources :pages
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

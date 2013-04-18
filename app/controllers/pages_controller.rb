@@ -1,7 +1,4 @@
 class PagesController < ApplicationController
-  caches_page :show
-  cache_sweeper :pages_sweeper
-  before_filter(only: :show) { @page_caching = true }
   def show
     @page = Page.find_by_permalink!(params[:id])
 

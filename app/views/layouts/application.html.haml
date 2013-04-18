@@ -5,16 +5,15 @@
     = stylesheet_link_tag 'application-screen', media: 'screen'
     = javascript_include_tag 'application'
     = google_webfonts_link_tag roboto: [100, 400, 500, 700, "italic", "bolditalic"]
-    = csrf_meta_tags unless @page_caching
+    = csrf_meta_tags
   %body
     %header#header
       = render 'layouts/partials/header'
     #content
-      - unless @page_caching
-        - if flash[:notice]
-          %p.notice= flash[:notice]
-        - if flash[:error]
-          %p.error= flash[:error]
+      - if flash[:notice]
+        %p.notice= flash[:notice]
+      - if flash[:error]
+        %p.error= flash[:error]
       %aside#sidebar
         = render 'layouts/partials/sidebar'
       #spin-container
