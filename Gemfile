@@ -20,6 +20,7 @@ gem 'pry'
 gem 'pry-rails'
 gem 'pry-doc'
 
+gem 'rack-throttle', '0.3.0', git: 'git://github.com/karmi/rack-throttle.git', ref: '02297be43714cb990dfe8a582eb5ec90c2861d49'
 
 group :production do
   gem 'pg'

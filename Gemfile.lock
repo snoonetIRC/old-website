@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/karmi/rack-throttle.git
+  revision: 02297be43714cb990dfe8a582eb5ec90c2861d49
+  ref: 02297be43714cb990dfe8a582eb5ec90c2861d49
+  specs:
+    rack-throttle (0.3.0)
+      rack (>= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -255,6 +263,7 @@ DEPENDENCIES
   pry-doc
   pry-rails
   pygments.rb
+  rack-throttle (= 0.3.0)!
   rails (= 3.2.11)
   redcarpet
   sass-rails

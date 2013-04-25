@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(:version => 20130108000452) do
   add_index "sidebars", ["ancestry"], :name => "index_sidebars_on_ancestry"
 
   create_table "sponsors", :force => true do |t|
+    t.string   "name"
     t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "name"
     t.string   "image_url"
   end
 
