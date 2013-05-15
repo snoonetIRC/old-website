@@ -55,7 +55,8 @@ gem 'pygments.rb'
 gem 'kaminari'
 gem 'google-webfonts'
 
-gem 'activeadmin'
+# A temporary measure till 0.6.1 is out
+gem 'activeadmin', github: 'snoonetIRC/active_admin'
 
 gem 'capistrano'
 

@@ -1,5 +1,6 @@
 Snoonet::Application.routes.draw do
 
+  root to: 'updates#index'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -9,8 +10,6 @@ Snoonet::Application.routes.draw do
   resources :staff
 
   resources :updates
-
-  root to: 'updates#index'
 
   get ':id',to:'pages#show', as: :page
 
