@@ -109,8 +109,6 @@ GEM
     formtastic (2.2.1)
       actionpack (>= 3.0)
     fssm (0.2.10)
-    google-webfonts (0.1.2)
-      actionpack (>= 3.0.0)
     guard (1.8.0)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -267,7 +265,6 @@ DEPENDENCIES
   coffee-rails
   compass
   compass-rails
-  google-webfonts
   guard-livereload
   haml
   jquery-rails
