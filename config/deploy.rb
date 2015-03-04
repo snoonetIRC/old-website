@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-server "cosmos.snoonet.org", :web, :app, :db, primary: true
+server "con.cosmos.snoonet.org", :web, :app, :db, primary: true
 
 set :application, 'snoonet.org'
 set :deploy_to, "/home/deployer/snoonet"
@@ -38,4 +38,3 @@ namespace :deploy do
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 end
-
