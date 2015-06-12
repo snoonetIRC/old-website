@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
 
   gem 'guard-livereload'
 
@@ -54,8 +54,7 @@ gem 'pygments.rb'
 
 gem 'kaminari'
 
-# A temporary measure till 0.6.1 is out
-gem 'activeadmin', github: 'snoonetIRC/active_admin'
+gem 'activeadmin', '~> 0.6.1'
 
 gem 'capistrano'
 
