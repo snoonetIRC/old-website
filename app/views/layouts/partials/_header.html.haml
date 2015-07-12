@@ -1,7 +1,10 @@
 .wrap
   %hgroup
-    %h1= link_to 'Snoonet', :root
+    %h1
+      = link_to 'Snoonet', :root
+      - if content_for?(:page_title)
+        %span= yield(:page_title)
   %nav#navigation
     %ul
       %li= link_to_unless_current t('navigation.updates'), :root
-      %li= link_to t('navigation.webchat'), CONFIG[:links][:webchat]
+      %li= link_to_unless_current t('navigation.webchat'), '/webchat'
