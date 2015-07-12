@@ -1,18 +1,20 @@
-%ul
-  - Sidebar.ranked.roots.each do |root|
-    %li.category
-      %a.category-header= root.name
-      - if root.has_children?
-        %ul
-          - root.children.ranked.each do |child|
-            - case child.linktype
-            - when 'page'
-              - url = page_path(child.page_name)
-            - when 'symbol'
-              - url = child.page_name.to_sym
-            - when 'url'
-              - url = child.page_name
-            - else
-              - url = '#'
-            %li{class: current_page?(url) ? 'current' : nil }= link_to child.name, url, class: child.cssclass
+%div
+  %div#menutoggle.open
+  %ul
+    - Sidebar.ranked.roots.each do |root|
+      %li.category
+        %a.category-header= root.name
+        - if root.has_children?
+          %ul
+            - root.children.ranked.each do |child|
+              - case child.linktype
+              - when 'page'
+                - url = page_path(child.page_name)
+              - when 'symbol'
+                - url = child.page_name.to_sym
+              - when 'url'
+                - url = child.page_name
+              - else
+                - url = '#'
+              %li{class: current_page?(url) ? 'current' : nil }= link_to child.name, url, class: child.cssclass
 
