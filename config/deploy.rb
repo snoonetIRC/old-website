@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-server "con.cosmos.snoonet.org", :web, :app, :db, primary: true
+server "snoonet.org", :web, :app, :db, primary: true
 
 set :application, 'snoonet.org'
 set :deploy_to, "/home/deployer/snoonet"
@@ -14,6 +14,7 @@ set :scm, :git
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
+ssh_options[:port] = 6969
 
 # keep last 5 releases, no more
 after "deploy:restart", "deploy:cleanup"
