@@ -156,7 +156,7 @@ body.webchat #header .wrap:after {
 }
 #main .post .content {
   text-align: justify;
-  color: #888;
+  color: #6a6a6a;
   line-height: 1.2;
 }
 #main .post .footer {
@@ -215,11 +215,14 @@ tr:nth-child(odd) td {
 }
 .content li {
   list-style: none;
+  padding-left: 10px;
+  margin-bottom: 4px;
 }
 .content li:before {
   content: "• ";
   font-family: Arial;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
+  margin-left: -10px;
 }
 .content strong {
   font-size: 16px;
@@ -228,6 +231,14 @@ tr:nth-child(odd) td {
 }
 .content h1 {
   font-size: 24px;
+}
+.post .content h1 {
+  font-size: 18px;
+  color: #555;
+}
+.content h2 {
+  font-size: 18px;
+  color: #2A4B95;
 }
 .content code {
   background: rgba(0, 0, 0, 0.02);
@@ -240,4 +251,10 @@ tr:nth-child(odd) td {
 .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content ul, .content ol, .content blockquote {
   margin-top: 14px;
   margin-bottom: 14px;
+}
+hr {
+  border: none;
+  height: 1px;
+  border-bottom: 1px solid #d2d2da;
+  margin: 10px 5px;
 }
