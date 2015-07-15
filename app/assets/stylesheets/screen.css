@@ -196,6 +196,8 @@ body.webchat #header .wrap:after {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc;
   background-color: #eaeaea;
+  height: 600px;
+  width: 100%;
 }
 table {
   width: 100%;
