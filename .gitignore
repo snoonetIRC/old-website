@@ -13,3 +13,6 @@ snoonet.sublime-workspace
 # or operating system, you probably want to add a global ignore instead:
 # Ignore all logfiles and tempfiles.
 snoonet.sublime-project
+
+# Deployment
+config/deploy/

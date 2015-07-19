@@ -24,7 +24,6 @@ gem 'rack-throttle', '0.3.0', git: 'git://github.com/karmi/rack-throttle.git', r
 
 group :production do
   gem 'pg'
-  gem 'unicorn'
 end
 
 # Gems used only for assets and not required
@@ -56,7 +55,17 @@ gem 'kaminari'
 
 gem 'activeadmin', '~> 0.6.1'
 
-gem 'capistrano'
+# A non shitty rack server
+gem 'puma'
+
+# Use Capistrano for deployment
+group :development do
+    gem 'capistrano',         require: false
+    gem 'capistrano-rbenv',   require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
+end
 
 # Sidebar tree
 gem 'ancestry'
