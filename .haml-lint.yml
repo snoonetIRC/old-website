@@ -1,0 +1,5 @@
+linters:
+  HtmlAttributes:
+    enabled: false
+  LineLength:
+    max: 100
