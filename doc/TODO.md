@@ -19,6 +19,7 @@
 * Ensure case insensitivity
 * Ensure a specific word delimiter in permalinks: `-`, `_`, `(space)`
 * * Redirect matching permalinks with incorrect word delimiters to the correct permalink
+* Editor https://simplemde.com
 
 ## Developer documentation
 
