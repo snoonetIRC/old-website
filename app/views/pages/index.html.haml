@@ -1,0 +1,13 @@
+%header
+  %h1 Sitemap
+%section.pages
+  %table
+    %thead
+      %tr
+        %td Name
+        %td Permalink
+    %tbody
+      - @pages.each do |page|
+        %tr
+          $td= page.name
+          $td= page.permalink
