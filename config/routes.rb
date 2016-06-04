@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   root "pages#root"
 
-  get "/sitemap", to: "pages#index"
+  get "/sitemap",   to: "pages#index"
+  get "*permalink", to: "pages#show"
 end
