@@ -210,6 +210,8 @@ GEM
       sexp_processor (~> 4.1)
     sexp_processor (4.7.0)
     shellany (0.0.1)
+    sitemap_generator (5.1.0)
+      builder
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
@@ -259,6 +261,7 @@ DEPENDENCIES
   less-rails
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
+  sitemap_generator
   spring
   sqlite3
   therubyracer
