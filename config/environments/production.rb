@@ -79,4 +79,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Route exceptions to the router. See: https://wearestac.com/blog/dynamic-error-pages-in-rails
+  config.exceptions_app = self.routes
 end
