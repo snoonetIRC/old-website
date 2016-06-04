@@ -10,7 +10,7 @@ class ChatOverlay
     @$overlay.removeClass("overlay-open")
 
   _setupElements: ->
-    @$popularChannels = $(".pages-index .popular-channels")
+    @$popularChannels = $(".pages-root .popular-channels")
     @$popularChannelLinks = @$popularChannels.find(".content a")
     @$overlay = @$popularChannels.find(".overlay")
     @$overlayClose = @$overlay.find(".close")
