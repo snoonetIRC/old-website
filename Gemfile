@@ -28,6 +28,8 @@ gem 'twitter-bootstrap-rails'
 gem 'flutie'
 # Use Sitemap Generator to implement the Sitemap 0.9 protocol. Read more: http://www.sitemaps.org/protocol.html
 gem 'sitemap_generator'
+# Use redcarpet for Markdown generation
+gem 'redcarpet'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
