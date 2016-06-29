@@ -1,3 +1,4 @@
-%header
-  %h1= @page.name
-%main= @page.content
+.container
+  %header
+    %h1= @page.name
+  %main!= @page.content_html
