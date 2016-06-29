@@ -14,12 +14,13 @@
 ActiveRecord::Schema.define(version: 20160604080658) do
 
   create_table "pages", force: :cascade do |t|
-    t.string   "name",                     null: false
-    t.string   "permalink",                null: false
-    t.string   "content",                  null: false
-    t.integer  "content_type", default: 0, null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name",             null: false
+    t.string   "permalink",        null: false
+    t.string   "content_markdown", null: false
+    t.string   "content_html",     null: false
+    t.string   "content_checksum", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
