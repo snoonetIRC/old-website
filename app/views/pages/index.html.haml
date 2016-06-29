@@ -1,13 +1,14 @@
-%header
-  %h1 Sitemap
-%main
-  %table
-    %thead
-      %tr
-        %td Name
-        %td Permalink
-    %tbody
-      - @pages.each do |page|
-        %tr
-          $td= page.name
-          $td= page.permalink
+.container
+  %header
+    %h1 Sitemap
+  %main
+    %table.table
+      %thead
+         %tr
+          %td Name
+          %td Permalink
+      %tbody
+        - @pages.each do |page|
+          %tr
+            %td= link_to page.name, page_path(page)
+            %td= link_to page.permalink, page_path(page)
