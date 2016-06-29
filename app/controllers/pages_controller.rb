@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def index
     @pages = Page.all
   end
@@ -13,6 +14,27 @@ class PagesController < ApplicationController
     end
   end
 
+  def new
+    @page = Page.new
+  end
+
+  def create
+    @page = Page.new(page_params)
+
+    if @page.save
+      redirect_to @page
+    else
+      render action: :new
+    end
+  end
+
   def root
   end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:name, :permalink, :content_markdown)
+  end
+
 end
