@@ -9,4 +9,20 @@ body {
   & > header {
     background: black;
   }
+
+  details {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+
+    & > div {
+      padding: 0 10px;
+    }
+
+    // TODO: Can't seem to get this to work. Remove that stupid outline!
+    // &:focus, &:active {
+    //   outline: none !important;
+    //   -webkit-appearance: none;
+    // }
+  }
+
 }
