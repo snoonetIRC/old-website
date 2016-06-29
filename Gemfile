@@ -53,4 +53,6 @@ group :development do
   gem 'guard-bundler', require: false
   gem 'guard-rspec', require: false
   gem 'guard-spring', require: false
+  # Use Pry for Rails console
+  gem 'pry-rails'
 end
