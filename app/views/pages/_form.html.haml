@@ -1,0 +1,27 @@
+= form_for @page, url: create_page_url do |form|
+  %fieldset.form-group
+    = form.label :name
+    %small.text-muted Required
+    = form.text_field :name, class: "form-control"
+  %fieldset.form-group
+    = form.label :permalink
+    %small.text-muted Optional
+    %details
+      %div
+        By default, this is generated from the page <code>Name</code> by the following process:
+        %ul
+          %li
+            Transliterating: Converting non-ASCII characters to ACSII. For example, <code>ü</code> |
+            becomes <code>u</code>.
+          %li
+            Parameterizing: Converting to lower case, replacing spaces with a <code>-</code>, and    |
+            removing any characters that are not included within <code>a-z</code>, <code>0-9</code>, |
+            or one of <code>-_</code>.
+        Any value given here will undergo this same process.
+    = form.text_field :permalink, class: "form-control"
+  %fieldset.form-group
+    = form.label :content_markdown
+    %small.text-muted Required
+    = form.text_area :content_markdown, class: "form-control"
+  %fieldset.form-group
+    = form.submit class: "btn btn-primary pull-right"
