@@ -23,17 +23,25 @@
 
 ## Pages
 
-* Parse and normalize params[:permalink] in controller
+* Parse and normalize `params[:permalink]` in controller
 * Ensure case insensitivity
 * Ensure a specific word delimiter in permalinks: `-`, `_`, `(space)`
 * * Redirect matching permalinks with incorrect word delimiters to the correct permalink
 * Editor https://simplemde.com
   * Customize Redcarpet renderer options to work smoothly with SimpleMDE
 * History? PageHistoryItem?
-* title field? optional, defaults to Name
-  * is_title_displayed, optional, defaults to true
-* Page#summary(max) to show summary in /sitemap
-* #edit route is being overwritten by #read route
+* `title` field
+  * Optional, nullable
+* `display_title` field
+  * Optional, not nullable, defaults to `true`
+* `hidden` field
+  * Hides the page from sitemap, and is accessible by any user
+  * Optional, not nullable, defaults to `false`
+* `private` field
+  * Hides the page from sitemap, and is accessible only by staff members
+  * Optional, not nullable, defaults to `false`
+* `Page#summary(max)` to show summary in /sitemap
+* `#edit` route is being overwritten by `#read` route
 
 ## Developer documentation
 
