@@ -1,6 +1,6 @@
 # README
 
-### Setup
+## Setup
 
 To install dependencies and prepare database, run `bin/setup`.
 
