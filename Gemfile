@@ -17,6 +17,7 @@ gem 'pry-doc'
 gem 'rack-throttle', '0.3.0', git: 'https://github.com/karmi/rack-throttle.git', ref: '02297be43714cb990dfe8a582eb5ec90c2861d49'
 
 group :production do
+  gem 'pg', '~> 0.11'
 end
 
 group :assets do
