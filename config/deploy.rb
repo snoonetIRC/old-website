@@ -1,6 +1,6 @@
-server 'snoonet.org', port: 6969, roles: [:web, :app, :db], primary: true
+server 'snoonet.org', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url, 'git@github.com:snoonetIRC/website.git'
+set :repo_url, 'https://github.com/snoonetIRC/website.git'
 set :application, 'website'
 set :user, 'deployer'
 set :rbenv_ruby, '1.9.3-p551'
@@ -17,7 +17,9 @@ set :puma_state, "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
 set :puma_error_log, "#{release_path}/log/puma.access.log"
-set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
+# This assumes the key is either in your default keys,
+# or you have an ssh config for snoonet.org
+set :ssh_options, {forward_agent: true, user: fetch(:user)}
 set :linked_files, %w{config/database.yml .rbenv-vars}
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
@@ -62,8 +64,8 @@ namespace :deploy do
     end
   end
 
-  before :starting,     :check_revision
-  after  :finishing,    :compile_assets
-  after  :finishing,    :cleanup
-  after  :finishing,    :restart
+  before :starting, :check_revision
+  after :finishing, :compile_assets
+  after :finishing, :cleanup
+  after :finishing, :restart
 end
