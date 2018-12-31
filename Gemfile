@@ -40,7 +40,7 @@ gem 'ancestry'
 gem 'puma'
 
 group :development do
-  gem 'capistrano'
+  gem 'capistrano', '< 3.5.0'
   gem 'capistrano-rbenv'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
