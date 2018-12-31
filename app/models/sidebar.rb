@@ -3,7 +3,9 @@ class Sidebar < ActiveRecord::Base
 
   has_ancestry
 
-  scope :ranked, order('rank asc')
+  scope :ranked, -> {
+    order('rank asc')
+  }
 
   validates :linktype, inclusion:{ in: %w(page symbol url)}
 end

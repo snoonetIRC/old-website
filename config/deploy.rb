@@ -1,7 +1,7 @@
 set :repo_url, 'https://github.com/snoonetIRC/website.git'
 set :application, 'website'
 set :user, 'deployer'
-set :rbenv_ruby, '1.9.3-p551'
+set :rbenv_ruby, '2.6.0'
 set :rbenv_type, :user
 set :puma_threads, [4, 16]
 set :puma_workers, 1
@@ -53,5 +53,5 @@ namespace :deploy do
 
   after :finishing, :compile_assets
   after :finishing, :cleanup
-  after :finishing, :restart
+  # after :finishing, :restart
 end

@@ -9,7 +9,7 @@ ActiveAdmin.register Update do
     column "Time", :timestamp
     column "Created", :created_at
     column "Updated", :updated_at
-    default_actions
+    actions
   end
   batch_action :publish do |selection|
     Update.find(selection).each do |post|
@@ -32,7 +32,7 @@ ActiveAdmin.register Update do
     f.input :body
     f.input :excerpt, hint: "Not required, but useful if you want a different post-blurb from body"
     f.input :published
-    f.buttons
+    f.actions
   end
 end
 end
