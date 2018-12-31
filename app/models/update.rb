@@ -4,7 +4,9 @@ class Update < ActiveRecord::Base
   before_create :default_timestamp
 
   default_scope { order(timestamp: :desc) }
-  scope :published, where(published: true)
+  scope :published, -> {
+    where(published: true)
+  }
 
   # Returns a summary of the current post object.
   # If the excerpt exists, returns that, otherwise, truncates at the `<!--more-->` tag
