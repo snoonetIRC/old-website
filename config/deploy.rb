@@ -1,5 +1,3 @@
-server 'snoonet.org', port: 22, roles: [:web, :app, :db], primary: true
-
 set :repo_url, 'https://github.com/snoonetIRC/website.git'
 set :application, 'website'
 set :user, 'deployer'
