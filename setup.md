@@ -13,13 +13,13 @@
     9. `git clone https://github.com/rbenv/rbenv-vars.git $(rbenv root)/plugins/rbenv-vars`
     10. `git clone https://github.com/tpope/rbenv-aliases.git "$(rbenv root)/plugins/rbenv-aliases"`
     11. `rbenv alias --auto`
-    12. `rbenv install 1.9.3-p551`
+    12. `rbenv install 2.6.0`
 3. Configure `/home/deployer/website/shared/config/database.yml` and `/home/deployer/website/shared/.rbenv-vars` as needed
 4. Set up your local copy of the website
     1. `git clone https://github.com/snoonetIRC/website.git`
     2. Follow all steps for setting up rbenv
     3. `cd website`
-    4. `rbenv local 1.9.3`
+    4. `rbenv local 2.6.0`
     5. `gem install bundler`
     6. `rbenv exec bundler install --with=development`
 5. `rbenv exec cap production deploy`
