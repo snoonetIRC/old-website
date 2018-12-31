@@ -3,7 +3,7 @@ class Update < ActiveRecord::Base
 
   before_create :default_timestamp
 
-  default_scope order: 'timestamp DESC'
+  default_scope { order(timestamp: :desc) }
   scope :published, where(published: true)
 
   # Returns a summary of the current post object.
