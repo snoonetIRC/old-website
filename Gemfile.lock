@@ -69,6 +69,7 @@ GEM
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
+    bcrypt (3.1.12)
     better_errors (2.5.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -122,6 +123,12 @@ GEM
     concurrent-ruby (1.1.4)
     crass (1.0.4)
     debug_inspector (0.0.3)
+    devise (4.5.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -213,6 +220,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     pg (0.21.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -298,6 +306,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -319,6 +329,7 @@ DEPENDENCIES
   coffee-rails
   compass
   compass-rails
+  devise
   guard-livereload
   haml
   jquery-rails

@@ -36,6 +36,7 @@ gem 'redcarpet'
 gem 'pygments.rb'
 gem 'kaminari'
 gem 'activeadmin'
+gem 'devise'
 gem 'ancestry'
 gem 'puma'
 
