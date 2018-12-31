@@ -110,7 +110,7 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.8.1)
+    ffi (1.9.25)
     formatador (0.2.4)
     formtastic (2.3.1)
       actionpack (>= 3.0)
@@ -293,3 +293,9 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier
+
+RUBY VERSION
+   ruby 1.9.3p551
+
+BUNDLED WITH
+   1.17.3
