@@ -18,6 +18,7 @@ gem 'rack-throttle', '0.3.0', git: 'https://github.com/karmi/rack-throttle.git',
 
 group :production do
   gem 'pg'
+  gem 'activerecord-postgresql-adapter'
 end
 
 group :assets do
