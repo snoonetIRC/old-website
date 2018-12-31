@@ -302,7 +302,6 @@ DEPENDENCIES
   kaminari
   liquid
   meta_request
-  pg
   pry
   pry-doc
   pry-rails
